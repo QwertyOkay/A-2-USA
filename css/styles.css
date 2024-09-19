@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=SUSE:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  /* background-color: #f5f5f5; */
+  padding: 20px 0;
+  background-image: url("../images/main.webp");
+  background-size: cover;
+  height: 90vh;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__banner {
+  width: 100%;
+  background: #1414ff;
+  padding: 10px;
+  text-align: center;
+}
+
+.header__banner p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.header__banner p > span {
+  color: aquamarine;
+}
+
+.logo img {
+  max-width: 120px;
+  border-radius: 5px;
+}
+
+.header__call {
+  text-align: right;
+}
+
+.header__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.header__img-wrapper img {
+  height: 50px;
+}
+
+.phone-number {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.phone {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__content {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.zip-form {
+  margin: 20px 0;
+}
+
+.zip-input {
+  padding: 10px;
+  font-size: 18px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.licensed-text p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.btn-call {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-call:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries для адаптивности */
+@media (max-width: 768px) {
+  .header__top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .zip-input {
+    width: 150px;
+    font-size: 16px;
+  }
+
+  .btn-primary,
+  .btn-call {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+  .phone-number .phone {
+    font-size: 18px;
+  }
+}
