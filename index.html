@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>domain2.com</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="/images/logo.webp" type="image/x-icon">
 </head>
+
 <body>
-     <div class="header__banner"><p><span>2024 Health Plans</span> Still Available!</p></div>
+    <div class="header__banner">
+        <p><span>2024 Health Plans</span> Still Available!</p>
+    </div>
     <header class="header">
         <div class="container container__header">
             <div class="header__top">
                 <div class="logo">
                     <a href="/">
-                    <img src="images/logo.webp" alt="Get Me Health Insurance Logo">
-                </a>
+                        <img src="images/logo.webp" alt="Get Me Health Insurance Logo">
+                    </a>
                 </div>
                 <div class="header__call">
                     <a href="tel:8777874589" class="phone-number">
@@ -38,85 +43,197 @@
     </header>
 
     <section class="health-plans">
-    <div class="container">
-        <h2>Compare Health Plans and Rates From Top Providers</h2>
-        <div class="health-providers">
-            <div class="provider">
-                <img src="images/1.webp" alt="Allstate">
-            </div>
-            <div class="provider">
-                <img src="images/2.webp" alt="Cigna">
-            </div>
-            <div class="provider">
-                <img src="images/3.webp" alt="Meritain Health">
-            </div>
-            <div class="provider">
-                <img src="images/4.webp" alt="SGIC">
-            </div>
-            <div class="provider">
-                <img src="images/5.webp" alt="United Healthcare">
+        <div class="container">
+            <h2>Compare Health Plans and Rates From Top Providers</h2>
+            <div class="health-providers">
+                <div class="provider">
+                    <img src="images/1.webp" alt="Allstate">
+                </div>
+                <div class="provider">
+                    <img src="images/2.webp" alt="Cigna">
+                </div>
+                <div class="provider">
+                    <img src="images/3.webp" alt="Meritain Health">
+                </div>
+                <div class="provider">
+                    <img src="images/4.webp" alt="SGIC">
+                </div>
+                <div class="provider">
+                    <img src="images/5.webp" alt="United Healthcare">
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
-     <section class="plans-section">
-     <div class="container">
-        <div class="tabs">
-            <button class="tab-button active" onclick="showPlan('individual')">Individual</button>
-            <button class="tab-button" onclick="showPlan('family')">Family</button>
-            <button class="tab-button" onclick="showPlan('short-term')">Short-Term</button>
-        </div>
-        <div class="plan-content">
-            <div class="plan active" id="individual">
-                <img src="/images/individ.webp" alt="Individual Plan">
-                <p>Your health is your greatest asset, and it deserves personalized care. We offer individual health insurance coverage tailored to your unique needs.</p>
+    <section class="plans-section">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="showPlan('individual')">Individual</button>
+                <button class="tab-button" onclick="showPlan('family')">Family</button>
+                <button class="tab-button" onclick="showPlan('short-term')">Short-Term</button>
             </div>
-            <div class="plan" id="family">
-                <img src="/images/family.webp" alt="Family Plan">
-                <p>We provide comprehensive health insurance plans designed to protect your entire family, offering flexible and affordable options.</p>
+            <div class="plan-content">
+                <div class="plan active" id="individual">
+                    <img src="/images/individ.webp" alt="Individual Plan">
+                    <p>Your health is your greatest asset, and it deserves personalized care. We offer individual health
+                        insurance coverage tailored to your unique needs.</p>
+                </div>
+                <div class="plan" id="family">
+                    <img src="/images/family.webp" alt="Family Plan">
+                    <p>We provide comprehensive health insurance plans designed to protect your entire family, offering
+                        flexible and affordable options.</p>
+                </div>
+                <div class="plan" id="short-term">
+                    <img src="/images/woman.webp" alt="Short-Term Plan">
+                    <p>Short-term health insurance offers a temporary solution for unexpected health needs or while you
+                        are between long-term plans.</p>
+                </div>
             </div>
-            <div class="plan" id="short-term">
-                <img src="/images/woman.webp" alt="Short-Term Plan">
-                <p>Short-term health insurance offers a temporary solution for unexpected health needs or while you are between long-term plans.</p>
+            <div class="view-plans-button">
+                <a href="howitworks.html" class="btn">View Plans</a>
             </div>
-        </div>
-        <div class="view-plans-button">
-            <a href="howitworks.html" class="btn">View Plans</a>
-        </div>
         </div>
     </section>
 
     <script>
         function showPlan(plan) {
-    const plans = document.querySelectorAll('.plan');
-    const buttons = document.querySelectorAll('.tab-button');
+            const plans = document.querySelectorAll('.plan');
+            const buttons = document.querySelectorAll('.tab-button');
 
-    plans.forEach(p => p.classList.remove('active'));
-    buttons.forEach(btn => btn.classList.remove('active'));
+            plans.forEach(p => p.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
 
-    document.getElementById(plan).classList.add('active');
-    document.querySelector(`[onclick="showPlan('${plan}')"]`).classList.add('active');
-}
+            document.getElementById(plan).classList.add('active');
+            document.querySelector(`[onclick="showPlan('${plan}')"]`).classList.add('active');
+        }
 
-// При загрузке страницы показать первый план
-document.addEventListener('DOMContentLoaded', () => {
-    showPlan('individual');
-});
+        // При загрузке страницы показать первый план
+        document.addEventListener('DOMContentLoaded', () => {
+            showPlan('individual');
+        });
 
     </script>
 
     <section class="how-it-works-section">
-         <div class="container">
-        <h4 class="section-title">HOW IT WORKS</h4>
-        <h2 class="main-title">A quick and simple way to find the right health insurance plan!</h2>
-        <p class="description">
-            Take the hassle and frustration out of the equation when searching for the best insurance plans with Open Enrollment Healthcare. Our agents will guide you through the process of finding the most affordable premium that keeps you covered.
-        </p>
+        <div class="container">
+            <h4 class="section-title">HOW IT WORKS</h4>
+            <h2 class="main-title">A quick and simple way to find the right health insurance plan!</h2>
+            <p class="description">
+                Take the hassle and frustration out of the equation when searching for the best insurance plans with
+                Open domain2.com. Our agents will guide you through the process of finding the most affordable premium
+                that keeps you covered.
+            </p>
         </div>
     </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h4 class="section-title">Hear What our Customers are Saying</h4>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <h3 class="customer-name">Anna K.</h3>
+                    <p class="date">08/23</p>
+                    <p class="testimonial-text">"Opting for their insurance was the best decision – the extensive
+                        coverage has given me peace of mind for my family’s healthcare needs."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial">
+                    <h3 class="customer-name">Michael L.</h3>
+                    <p class="date">07/23</p>
+                    <p class="testimonial-text">"Their flexible policies and affordable premiums were exactly what I
+                        needed when changing jobs. I’ve felt protected and supported throughout the process."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial">
+                    <h3 class="customer-name">Sarah T.</h3>
+                    <p class="date">03/23</p>
+                    <p class="testimonial-text">"This company’s customer service is beyond compare – they really
+                        prioritize their clients' well-being, making me feel valued every step of the way."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us-section">
+        <div class="container container__about">
+            <div class="about-us-content">
+
+                <h4 class="section-title">ABOUT US</h4>
+                <h2 class="main-title">Why Open domain2.com?</h2>
+                <p class="description">Open domain2.com has assisted countless individuals in securing budget-friendly
+                    health insurance that meets all of their requirements. Our services include:</p>
+                <ul class="features-list">
+                    <li>✔ An easy-to-navigate process for selecting the right insurance plans</li>
+                    <li>✔ Professional advice from our certified agents</li>
+                    <li>✔ Convenient comparison of various plans in one place</li>
+                    <li>✔ Outstanding customer service</li>
+                </ul>
+                <a href="/questions.html" class="btn">Enroll Now</a>
+            </div>
+
+            <div class="about-us-image">
+                <img src="/images/aboutfamily.webp" alt="Happy Family">
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <p class="footer-text">
+            domain2.com is managed and operated by Med insurance Aca LLC, a fully licensed insurance agency.
+            Applications for insurance are accepted only in regions where licensing and appointments are valid.
+            Insurance plans may not be accessible in all states. domain2.com, Med insurance Aca, LLC have no direct
+            association with the U.S. government or the federal Medicare program. A licensed agent will be in touch to
+            discuss Medicare insurance options via phone, SMS, or email. We do not offer every available plan in your
+            area. All information we provide is specific to the plans we offer in your region. This is a formal
+            insurance solicitation. The plans are insured or provided by a Medicare Advantage organization with a
+            contract with Medicare, or by a Medicare-approved Part D sponsor. Plan enrollment depends on the contract's
+            renewal with Medicare.
+        </p>
+        <p class="footer-copyright">
+            © 2024 domain2.com | 2000 Commerce Avenue, Suite 720, Miami, FL 33101 <a href="terms.html">Terms &
+                Conditions</a> | <a href="privacy.html">Privacy Policy</a> | <a href="ccpa.html">CCPA Disclosure</a>
+        </p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h3>Tell Us Your Story - Call us</h3>
+            <img src="/images/operator.jpeg" alt="Call Us Image" class="modal-image">
+            <p class="contact_phone">Contact us at: <a href="tel:8777874589">(877) 787-4589</a></p>
+        </div>
+    </div>
+
+
+   <script>
+    
+    if (!localStorage.getItem('modalClosed')) {
+        
+        setTimeout(function () {
+            document.getElementById("modal").style.display = "block";
+        }, 10000);
+    }
+
+    
+    document.getElementById("closeModalBtn").onclick = function () {
+        document.getElementById("modal").style.display = "none";
+        localStorage.setItem('modalClosed', 'true'); 
+    };
+
+    
+    window.onclick = function (event) {
+        if (event.target == document.getElementById("modal")) {
+            document.getElementById("modal").style.display = "none";
+            localStorage.setItem('modalClosed', 'true'); 
+        }
+    };
+</script>
 
 
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

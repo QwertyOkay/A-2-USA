@@ -1,12 +1,3 @@
-
-        // setTimeout(function() {
-        //     document.getElementById('myModal').style.display = "flex";
-        // }, 15000); // Show modal after 15 seconds
-
-        // document.querySelector('.close').addEventListener('click', function() {
-        //     document.getElementById('myModal').style.display = "none";
-        // });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Проверяем наличие модального окна в DOM
     const modal = document.getElementById('myModal');

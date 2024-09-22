@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>domain2.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="/images/logo.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container__header">
+            <div class="header__top">
+                <div class="logo">
+                    <a href="/">
+                        <img src="images/logo.webp" alt="Get Me Health Insurance Logo">
+                    </a>
+                </div>
+                <div class="header__call">
+                    <a href="tel:8777874589" class="phone-number">
+                        <span class="phone-text">Licensed Agents Available Now</span>
+                        <span class="phone">(877) 787-4589</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header__content">
+                <h1>Enroll in 2024 Health Insurance</h1>
+                <div class="licensed-text">
+                    <p>Licensed Agents Available Now <br> Call to Enroll in a 2024 Health Plan</p>
+                </div>
+                <a href="tel:8777874589" class="btn-call">(877) 787-4589</a>
+                <div class="header__img-wrapper">
+                    <img src="./images/header.webp" alt="header">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="how-it-works-section">
+        <div class="container">
+            <h4 class="section-title">HOW IT WORKS</h4>
+            <h2 class="main-title">A quick and simple way to find the right health insurance plan!</h2>
+            <p class="description">
+                Take the hassle and frustration out of the equation when searching for the best insurance plans with
+                Open domain2.com. Our agents will guide you through the process of finding the most affordable premium
+                that keeps you covered.
+            </p>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="icon">
+                        <img src="/images/icon1.svg" alt="Share Your Details Icon">
+                    </div>
+                    <h3 class="step-title">Share Your Details</h3>
+                    <p class="step-description">Give us the necessary information so we can help you choose the ideal
+                        insurance plan tailored for you</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon">
+                        <img src="/images/2.svg" alt="Review Your Choices Icon">
+                    </div>
+                    <h3 class="step-title">Review Your Choices</h3>
+                    <p class="step-description">Examine the available insurance options with the guidance of our expert
+                        agents</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon">
+                        <img src="/images/3.svg" alt="Secure Your Coverage Icon">
+                    </div>
+                    <h3 class="step-title">Secure Your Coverage</h3>
+                    <p class="step-description">Select the most cost-effective insurance plan available in your region
+                        to ensure your protection</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+    <div class="cta-container">
+        <h2>Get the Right Health Insurance Plan Now!</h2>
+        <p>With domain2.com, you will quickly gain access to the most affordable health insurance plans available in your state. Our helpful agents will guide you every step of the way.</p>
+        <button class="cta-button" id="openModalBtn">Enroll Now</button>
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h3>Tell Us Your Story - Call us</h3>
+         <img src="/images/operator.jpeg" alt="Call Us Image" class="modal-image">
+        <p class="contact_phone">Contact us at: <a href="tel:8777874589">(877) 787-4589</a></p>
+    </div>
+</div>
+
+<script>
+document.getElementById("openModalBtn").onclick = function () {
+    document.getElementById("modal").style.display = "block";
+};
+
+document.getElementById("closeModalBtn").onclick = function () {
+    document.getElementById("modal").style.display = "none";
+};
+
+window.onclick = function (event) {
+    if (event.target == document.getElementById("modal")) {
+        document.getElementById("modal").style.display = "none";
+    }
+};
+</script>
+
+    <footer class="footer-section">
+        <p class="footer-text">
+            domain2.com is managed and operated by Med insurance Aca LLC, a fully licensed insurance agency.
+            Applications for insurance are accepted only in regions where licensing and appointments are valid.
+            Insurance plans may not be accessible in all states. domain2.com, Med insurance Aca, LLC have no direct
+            association with the U.S. government or the federal Medicare program. A licensed agent will be in touch to
+            discuss Medicare insurance options via phone, SMS, or email. We do not offer every available plan in your
+            area. All information we provide is specific to the plans we offer in your region. This is a formal
+            insurance solicitation. The plans are insured or provided by a Medicare Advantage organization with a
+            contract with Medicare, or by a Medicare-approved Part D sponsor. Plan enrollment depends on the contract's
+            renewal with Medicare.
+        </p>
+        <p class="footer-copyright">
+            © 2024 domain2.com | 2000 Commerce Avenue, Suite 720, Miami, FL 33101 <a href="terms.html">Terms &
+                Conditions</a> | <a href="privacy.html">Privacy Policy</a> | <a href="ccpa.html">CCPA Disclosure</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
