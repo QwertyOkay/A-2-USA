@@ -158,10 +158,10 @@ p {
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 24px;
+  border-radius: 20px;
   background-color: #4caf50;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 .btn-call:hover {
@@ -230,5 +230,127 @@ p {
 
   .provider img {
     max-width: 120px; /* Уменьшаем ширину логотипов на мобильных */
+  }
+}
+
+.plans-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6469ef;
+  color: white;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.tab-button.active {
+  background-color: #3e44b1;
+}
+
+.plan-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.plan {
+  display: none;
+}
+
+.plan.active {
+  display: block;
+}
+
+.plan img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.view-plans-button {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: #3e44b1;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2d34a1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .plan img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.plan p {
+  padding: 10px;
+}
+
+.how-it-works-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #eaf2f7;
+}
+
+.section-title {
+  color: #336699;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 28px;
+  color: #12375e;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #6b7b91;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
   }
 }

@@ -58,8 +58,63 @@
             </div>
         </div>
     </div>
-</section>
+    </section>
 
+     <section class="plans-section">
+     <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="showPlan('individual')">Individual</button>
+            <button class="tab-button" onclick="showPlan('family')">Family</button>
+            <button class="tab-button" onclick="showPlan('short-term')">Short-Term</button>
+        </div>
+        <div class="plan-content">
+            <div class="plan active" id="individual">
+                <img src="/images/individ.webp" alt="Individual Plan">
+                <p>Your health is your greatest asset, and it deserves personalized care. We offer individual health insurance coverage tailored to your unique needs.</p>
+            </div>
+            <div class="plan" id="family">
+                <img src="/images/family.webp" alt="Family Plan">
+                <p>We provide comprehensive health insurance plans designed to protect your entire family, offering flexible and affordable options.</p>
+            </div>
+            <div class="plan" id="short-term">
+                <img src="/images/woman.webp" alt="Short-Term Plan">
+                <p>Short-term health insurance offers a temporary solution for unexpected health needs or while you are between long-term plans.</p>
+            </div>
+        </div>
+        <div class="view-plans-button">
+            <a href="howitworks.html" class="btn">View Plans</a>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        function showPlan(plan) {
+    const plans = document.querySelectorAll('.plan');
+    const buttons = document.querySelectorAll('.tab-button');
+
+    plans.forEach(p => p.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(plan).classList.add('active');
+    document.querySelector(`[onclick="showPlan('${plan}')"]`).classList.add('active');
+}
+
+// При загрузке страницы показать первый план
+document.addEventListener('DOMContentLoaded', () => {
+    showPlan('individual');
+});
+
+    </script>
+
+    <section class="how-it-works-section">
+         <div class="container">
+        <h4 class="section-title">HOW IT WORKS</h4>
+        <h2 class="main-title">A quick and simple way to find the right health insurance plan!</h2>
+        <p class="description">
+            Take the hassle and frustration out of the equation when searching for the best insurance plans with Open Enrollment Healthcare. Our agents will guide you through the process of finding the most affordable premium that keeps you covered.
+        </p>
+        </div>
+    </section>
 
 
     <script src="js/scripts.js"></script>
