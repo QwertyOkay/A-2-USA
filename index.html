@@ -201,36 +201,60 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeModalBtn">&times;</span>
-            <h3>Tell Us Your Story - Call us</h3>
-            <img src="/images/operator.jpeg" alt="Call Us Image" class="modal-image">
-            <p class="contact_phone">Contact us at: <a href="tel:8777874589">(877) 787-4589</a></p>
+
+            <div class="modal_box">
+                <div>
+                <img src="/images/operator.jpeg" alt="Call Us Image" class="modal-image">
+            </div>
+            <div>
+                <p class="contact_phone"><a href="tel:8777874589">(877) 787-4589</a></p>
+            </div>
+            <h3>Tell Us Your Story - Call us!</h3>
+            </div>
+            
         </div>
     </div>
 
 
-   <script>
-    
-    if (!localStorage.getItem('modalClosed')) {
-        
-        setTimeout(function () {
-            document.getElementById("modal").style.display = "block";
-        }, 10000);
-    }
+    <!-- Conatct Modal -->
+    <!-- <script>
+        let lastCloseTime = 0; // Переменная для отслеживания времени последнего закрытия
 
-    
-    document.getElementById("closeModalBtn").onclick = function () {
-        document.getElementById("modal").style.display = "none";
-        localStorage.setItem('modalClosed', 'true'); 
-    };
+        // Функция для показа модального окна
+        function showModal() {
+            const currentTime = new Date().getTime();
 
-    
-    window.onclick = function (event) {
-        if (event.target == document.getElementById("modal")) {
-            document.getElementById("modal").style.display = "none";
-            localStorage.setItem('modalClosed', 'true'); 
+            // Проверяем, что прошло хотя бы 3 секунды с момента последнего закрытия окна
+            if (currentTime - lastCloseTime >= 3000) {
+                document.getElementById("modal").style.display = "block";
+            }
         }
-    };
-</script>
+
+        // Показываем модальное окно через 3-4 секунды после загрузки страницы
+        setTimeout(function () {
+            showModal();
+        }, Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000);
+
+        // Закрытие модального окна по нажатию на кнопку
+        document.getElementById("closeModalBtn").onclick = function () {
+            document.getElementById("modal").style.display = "none";
+            lastCloseTime = new Date().getTime(); // Обновляем время последнего закрытия
+        };
+
+        // Закрытие окна по клику на фон (вне модального окна)
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modal")) {
+                document.getElementById("modal").style.display = "none";
+                lastCloseTime = new Date().getTime(); // Обновляем время последнего закрытия
+            }
+        };
+
+        // Устанавливаем интервал для показа модального окна каждые 3-4 секунды
+        setInterval(function () {
+            showModal();
+        }, Math.floor(Math.random() * (4000 - 3000 + 1)) + 3000); // Интервал случайный между 3 и 4 сек
+    </script> -->
+
 
 
     <script src="js/scripts.js"></script>
