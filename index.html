@@ -198,55 +198,39 @@
         </p>
     </footer>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModalBtn">&times;</span>
+   <script>
+    let lastCloseTime = 0;
 
-            <div class="modal_box">
-                <div>
-                <img src="/images/operator.jpeg" alt="Call Us Image" class="modal-image">
-            </div>
-            <div>
-                <p class="contact_phone"><a href="tel:8777874589">(877) 787-4589</a></p>
-            </div>
-            <h3>Tell Us Your Story - Call us!</h3>
-            </div>
-            
-        </div>
-    </div>
+    // Функция для отображения модального окна
+    function showModal() {
+        const currentTime = new Date().getTime();
 
-
-    <!-- Contact Modal -->
-    <script>
-        let lastCloseTime = 0; // Переменная для отслеживания времени последнего закрытия окна
-
-// Функция для показа всплывающего окна
-function showModal() {
-    const currentTime = new Date().getTime();
-    
-    // Проверяем, что прошло хотя бы 1 минута (60000 миллисекунд) с момента закрытия окна
-    if (currentTime - lastCloseTime >= 60000) {
-        document.getElementById('myModal').style.display = "flex";
+        // Проверяем, что прошло хотя бы 1 минута (60000 миллисекунд) с момента закрытия окна
+        if (currentTime - lastCloseTime >= 60000) {
+            document.getElementById('myModal').style.display = "flex";
+        }
     }
-}
 
-// Функция для скрытия всплывающего окна
-function hideModal() {
-    document.getElementById('myModal').style.display = "none";
-    lastCloseTime = new Date().getTime(); // Запоминаем время закрытия
-}
+    // Функция для скрытия всплывающего окна
+    function hideModal() {
+        document.getElementById('myModal').style.display = "none";
+        lastCloseTime = new Date().getTime(); // Запоминаем время закрытия
+    }
 
-// Показывать окно каждые 1 минуту
-setInterval(function() {
-    showModal();
-}, 60000); // Интервал 1 минута (60000 миллисекунд)
+    // Добавление обработчиков событий после загрузки DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        // Закрытие модального окна по клику на крестик
+        const closeButton = document.querySelector('.close');
+        if (closeButton) {
+            closeButton.addEventListener('click', function () {
+                hideModal();
+            });
+        }
 
-// Закрытие модального окна по клику
-document.querySelector('.close').addEventListener('click', function() {
-    hideModal();
-});
-
-    </script>
+        // Показывать окно каждые 1 минуту (60000 миллисекунд)
+        setInterval(showModal, 60000);
+    });
+</script>
 
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -274,9 +258,7 @@ document.querySelector('.close').addEventListener('click', function() {
             </div>
         </div>
     </div>
-
-
-    <script src="js/scripts.js"></script>
+    
 </body>
 
 </html>
