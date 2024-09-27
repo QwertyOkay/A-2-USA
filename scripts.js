@@ -1,27 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Проверяем наличие модального окна в DOM
-    const modal = document.getElementById('myModal');
-    const closeButton = document.querySelector('.close');
-    
-    if (!modal || !closeButton) {
-        console.error('Модальное окно или кнопка закрытия не найдены в DOM!');
-        return;
+
+    // Функция для отображения модального окна
+    function showModal() {
+        document.getElementById('myModal').style.display = "flex";
     }
 
-    // Проверяем в локальном хранилище, закрывалось ли уже модальное окно
-    if (!localStorage.getItem('modalClosed')) {
-        // Если не закрывалось, показываем модальное окно через 15 секунд
-        setTimeout(function() {
-            modal.style.display = "flex";  // Убедитесь, что используете правильное свойство CSS
-        }, 15000); // Показываем модальное окно через 15 секунд
+    // Функция для скрытия всплывающего окна
+    function hideModal() {
+        document.getElementById('myModal').style.display = "none";
     }
 
-    // Обработчик нажатия на кнопку закрытия модального окна
-    closeButton.addEventListener('click', function() {
-        modal.style.display = "none";
-        // Сохраняем информацию о том, что модальное окно было закрыто
-        localStorage.setItem('modalClosed', 'true');
+    // Добавление обработчиков событий после загрузки DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        // Показывать окно через 10-15 секунд после загрузки страницы
+        const showModalTimeout = Math.floor(Math.random() * (15000 - 10000 + 1)) + 10000; // Рандомное время от 10 до 15 секунд
+        setTimeout(showModal, showModalTimeout);
+
+        // Закрытие модального окна по клику на крестик
+        const closeButton = document.querySelector('.close');
+        if (closeButton) {
+            closeButton.addEventListener('click', function () {
+                hideModal();
+            });
+        }
     });
-});
-
-

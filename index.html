@@ -198,39 +198,7 @@
         </p>
     </footer>
 
-   <script>
-    let lastCloseTime = 0;
-
-    // Функция для отображения модального окна
-    function showModal() {
-        const currentTime = new Date().getTime();
-
-        // Проверяем, что прошло хотя бы 1 минута (60000 миллисекунд) с момента закрытия окна
-        if (currentTime - lastCloseTime >= 60000) {
-            document.getElementById('myModal').style.display = "flex";
-        }
-    }
-
-    // Функция для скрытия всплывающего окна
-    function hideModal() {
-        document.getElementById('myModal').style.display = "none";
-        lastCloseTime = new Date().getTime(); // Запоминаем время закрытия
-    }
-
-    // Добавление обработчиков событий после загрузки DOM
-    document.addEventListener('DOMContentLoaded', function () {
-        // Закрытие модального окна по клику на крестик
-        const closeButton = document.querySelector('.close');
-        if (closeButton) {
-            closeButton.addEventListener('click', function () {
-                hideModal();
-            });
-        }
-
-        // Показывать окно каждые 1 минуту (60000 миллисекунд)
-        setInterval(showModal, 60000);
-    });
-</script>
+   
 
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -259,6 +227,7 @@
         </div>
     </div>
     
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
